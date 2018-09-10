@@ -71,6 +71,9 @@
 
 #endif
 
+/**
+ * 其中intptr_t uintptr_t 定义在文件 /usr/include/stdint.h文件中
+ */
 typedef intptr_t        ngx_int_t;
 typedef uintptr_t       ngx_uint_t;
 typedef intptr_t        ngx_flag_t;
