@@ -207,11 +207,17 @@ main(int argc, char *const *argv)
         return 1;
     }
 
+    /**
+     * 调用 ngx_get_options() 解析命令行参数
+     */
     if (ngx_get_options(argc, argv) != NGX_OK) {
         return 1;
     }
 
     if (ngx_show_version) {
+        /**
+         * 显示版本信息及帮助信息
+         */
         ngx_show_version_info();
 
         if (!ngx_test_config) {
@@ -221,6 +227,9 @@ main(int argc, char *const *argv)
 
     /* TODO */ ngx_max_sockets = -1;
 
+    /**
+     * 调用 ngx_time_init() 初始化并更新时间
+     */
     ngx_time_init();
 
 #if (NGX_PCRE)
@@ -230,6 +239,9 @@ main(int argc, char *const *argv)
     ngx_pid = ngx_getpid();
     ngx_parent = ngx_getppid();
 
+    /**
+     * 调用 ngx_log_init() 初始化日志
+     */
     log = ngx_log_init(ngx_prefix);
     if (log == NULL) {
         return 1;
@@ -245,23 +257,42 @@ main(int argc, char *const *argv)
      * ngx_process_options()
      */
 
+    /**
+     * 创建全局变量 init_cycle 清零；并创建改变里量的内存池 pool
+     *
+     */
     ngx_memzero(&init_cycle, sizeof(ngx_cycle_t));
     init_cycle.log = log;
     ngx_cycle = &init_cycle;
 
+    /**
+     * 创建资源池
+     */
     init_cycle.pool = ngx_create_pool(1024, log);
     if (init_cycle.pool == NULL) {
         return 1;
     }
 
+    /**
+     * 调用 ngx_save_argv()
+     * 保存命令行参数至全局变量 ngx_os_argv,ngx_argc,ngx_argv 中
+     */
     if (ngx_save_argv(&init_cycle, argc, argv) != NGX_OK) {
         return 1;
     }
 
+    /**
+     * 调用 ngx_process_options()
+     * 初始化 init_cycle的prefix,conf_prefix,conf_file,conf_param等字段
+     */
     if (ngx_process_options(&init_cycle) != NGX_OK) {
         return 1;
     }
-
+    /**
+     * 调用 ngx_os_init()
+     * 初始化系统相关的变量
+     * 如 内存页面大小，ngx_pagesize,最大连接数ngx_max_sockets等
+     */
     if (ngx_os_init(log) != NGX_OK) {
         return 1;
     }
@@ -270,6 +301,10 @@ main(int argc, char *const *argv)
      * ngx_crc32_table_init() requires ngx_cacheline_size set in ngx_os_init()
      */
 
+    /**
+     * 调用 ngx_crc32_table_init() 初始化 CRC 表（循环冗余校验表）
+     *
+     */
     if (ngx_crc32_table_init() != NGX_OK) {
         return 1;
     }
@@ -280,14 +315,24 @@ main(int argc, char *const *argv)
 
     ngx_slab_sizes_init();
 
+    /**
+     * 通过环境变量 NGINX 完成 socket的继承，
+     * 将其保存在全局变量 init_cycle的 listening 数组中
+     */
     if (ngx_add_inherited_sockets(&init_cycle) != NGX_OK) {
         return 1;
     }
 
+    /**
+     * 初始化每个模块 module的index ，并计算 ngx_max_module;
+     */
     if (ngx_preinit_modules() != NGX_OK) {
         return 1;
     }
 
+    /**
+     * 进行初始化全局变量 init_cycle !! 很关键的步骤 !!!
+     */
     cycle = ngx_init_cycle(&init_cycle);
     if (cycle == NULL) {
         if (ngx_test_config) {
@@ -324,7 +369,14 @@ main(int argc, char *const *argv)
         return 0;
     }
 
+    /**
+     * 信号处理
+     */
     if (ngx_signal) {
+        /**
+         * 调用 ngx_signal_process 处理进程信号
+         */
+
         return ngx_signal_process(cycle, ngx_signal);
     }
 
@@ -339,11 +391,16 @@ main(int argc, char *const *argv)
     }
 
 #if !(NGX_WIN32)
-
+    /**
+     * 调用 ngx_init_signals() 注册相关信号
+     */
     if (ngx_init_signals(cycle->log) != NGX_OK) {
         return 1;
     }
 
+    /**
+     * 若无法继承 sockets 则调用 ngx_daemon()创建守护进程，并设置其标志
+     */
     if (!ngx_inherited && ccf->daemon) {
         if (ngx_daemon(cycle->log) != NGX_OK) {
             return 1;
@@ -358,6 +415,9 @@ main(int argc, char *const *argv)
 
 #endif
 
+    /**
+     * 调用 ngx_create_pidfile() 创建 进程 ID ，并记录文件
+     */
     if (ngx_create_pidfile(&ccf->pid, cycle->log) != NGX_OK) {
         return 1;
     }
@@ -375,10 +435,19 @@ main(int argc, char *const *argv)
 
     ngx_use_stderr = 0;
 
+    /**
+     * 进入进程处理
+     */
     if (ngx_process == NGX_PROCESS_SINGLE) {
+        /**
+         * 单进程工作模式
+         */
         ngx_single_process_cycle(cycle);
 
     } else {
+        /**
+         * 多进程工作模式，即 master-worker多进程工作模式
+         */
         ngx_master_process_cycle(cycle);
     }
 
@@ -386,6 +455,9 @@ main(int argc, char *const *argv)
 }
 
 
+/**
+ * 显示版本号与帮助信息
+ */
 static void
 ngx_show_version_info(void)
 {

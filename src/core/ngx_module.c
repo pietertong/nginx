@@ -21,7 +21,10 @@ static ngx_uint_t ngx_module_ctx_index(ngx_cycle_t *cycle, ngx_uint_t type,
 ngx_uint_t         ngx_max_module;
 static ngx_uint_t  ngx_modules_n;
 
-
+/**
+ * 初始化每个模块module的index，并计算ngx_max_module
+ * @return
+ */
 ngx_int_t
 ngx_preinit_modules(void)
 {

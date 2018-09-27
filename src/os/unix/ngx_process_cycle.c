@@ -284,7 +284,11 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
     }
 }
 
-
+/**
+ * 单进程工作模式
+ *
+ * @param cycle
+ */
 void
 ngx_single_process_cycle(ngx_cycle_t *cycle)
 {
