@@ -7,10 +7,19 @@
 LC_ALL=C
 export LC_ALL
 
+#auto/options 脚本处理 configure命令参数
+#例如 参数 --help  那么显示支持的所有参数格式
+#options 脚本会定义后续工作将用到的变量，然后根据本次参数以及末日值设置这些变量
 . auto/options
+
+#auto/init 脚本初始化后续产生的文件路径，
+#例如 Makefile 、ngx_modules.c 等文件默认情况下将会在 <nginx-source>/objs/
 . auto/init
+
+#auto/sources 脚本将分析 Nginx的源码结构，这样才能构造后续的 Makefile 文件
 . auto/sources
 
+#
 test -d $NGX_OBJS || mkdir -p $NGX_OBJS
 
 echo > $NGX_AUTO_HEADERS_H
@@ -46,6 +55,7 @@ else
     NGX_SYSTEM=$NGX_PLATFORM
 fi
 
+#检测并设置编译器，如GCC
 . auto/cc/conf
 
 if [ "$NGX_PLATFORM" != win32 ]; then

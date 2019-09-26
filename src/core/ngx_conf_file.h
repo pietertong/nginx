@@ -46,10 +46,18 @@
 #define NGX_CONF_1MORE       0x00000800
 #define NGX_CONF_2MORE       0x00001000
 
-#define NGX_DIRECT_CONF      0x00010000
 
+/**
+ * 指令类型是 core 模块类型的定义
+ *
+ */
+#define NGX_DIRECT_CONF      0x00010000
 #define NGX_MAIN_CONF        0x01000000
 #define NGX_ANY_CONF         0x1F000000
+/**
+ * NGX_MAIN_CONF 包括：
+ * event,http,mail,upstream 等可以形成配置块的指令
+ */
 
 
 
@@ -73,13 +81,29 @@
 
 #define NGX_MAX_CONF_ERRSTR  1024
 
-
+/**
+ *
+ */
 struct ngx_command_s {
-    ngx_str_t             name;
+    ngx_str_t             name; /** 配置项名称*/
+    /** 配置项类型， type将指定配置项可以出现的位置已经携带参数的个数*/
     ngx_uint_t            type;
+    /**
+     * 处理配置项参数
+     * @param cf
+     * @param cmd
+     * @param conf
+     * @return
+     */
     char               *(*set)(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);
+    /**
+     * 在配置文件中偏移量，conf与offset 配合使用
+     */
     ngx_uint_t            conf;
     ngx_uint_t            offset;
+    /**
+     * 配置项读取后的处理方法，必须是指向 ngx_conf_post_t 结构
+     */
     void                 *post;
 };
 
@@ -96,10 +120,10 @@ struct ngx_open_file_s {
 
 
 typedef struct {
-    ngx_file_t            file;
-    ngx_buf_t            *buffer;
-    ngx_buf_t            *dump;
-    ngx_uint_t            line;
+    ngx_file_t            file; /**文件属性*/
+    ngx_buf_t            *buffer;/** 文件的内容*/
+    ngx_buf_t            *dump; /** 文件打印*/
+    ngx_uint_t            line; /** 文件行数*/
 } ngx_conf_file_t;
 
 
@@ -112,23 +136,25 @@ typedef struct {
 typedef char *(*ngx_conf_handler_pt)(ngx_conf_t *cf,
     ngx_command_t *dummy, void *conf);
 
-
+/**
+ * 解析配置时所使用的结构体
+ */
 struct ngx_conf_s {
-    char                 *name;
-    ngx_array_t          *args;
+    char                 *name; /** 当前解析到指令*/
+    ngx_array_t          *args; /** 当前指令所包含的所有参数*/
 
-    ngx_cycle_t          *cycle;
-    ngx_pool_t           *pool;
-    ngx_pool_t           *temp_pool;
-    ngx_conf_file_t      *conf_file;
-    ngx_log_t            *log;
+    ngx_cycle_t          *cycle; /** 待解析的全局变量 ngx_cycle_t*/
+    ngx_pool_t           *pool; /** 内存池*/
+    ngx_pool_t           *temp_pool; /** 临时内存池，分配一些临时数组或变量*/
+    ngx_conf_file_t      *conf_file; /** 待解析的分配文件*/
+    ngx_log_t            *log; /** 日志信息*/
 
-    void                 *ctx;
-    ngx_uint_t            module_type;
-    ngx_uint_t            cmd_type;
+    void                 *ctx; /**描述指令的上下文 ， 存放当前指令所在的模块作用域*/
+    ngx_uint_t            module_type; /**当前解析的指令的模块类型*/
+    ngx_uint_t            cmd_type; /** 当前解析的指令的指令类型*/
 
-    ngx_conf_handler_pt   handler;
-    void                 *handler_conf;
+    ngx_conf_handler_pt   handler; /** 模块自定义的 handler，即指令自定义的处理函数*/
+    void                 *handler_conf;/** 自定义处理函数需要的相关配置*/
 };
 
 

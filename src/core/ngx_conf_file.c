@@ -10,6 +10,8 @@
 
 #define NGX_CONF_BUFFER  4096
 
+
+
 static ngx_int_t ngx_conf_add_dump(ngx_conf_t *cf, ngx_str_t *filename);
 static ngx_int_t ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last);
 static ngx_int_t ngx_conf_read_token(ngx_conf_t *cf);
@@ -153,7 +155,16 @@ ngx_conf_add_dump(ngx_conf_t *cf, ngx_str_t *filename)
     return NGX_OK;
 }
 
-
+/**
+ * 函数功能： 配置文件解析，
+ * 支持三种不同的解析类型：
+ * 1、解析配置文件
+ * 2、解析block块设置
+ * 3、解析命令行配置
+ * @param cf
+ * @param filename
+ * @return
+ */
 char *
 ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
 {
@@ -173,9 +184,12 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
     prev = NULL;
 #endif
 
+    /**
+     * 如果是解析配置文件
+     */
     if (filename) {
 
-        /* open configuration file */
+        /** open configuration file */
 
         fd = ngx_open_file(filename->data, NGX_FILE_RDONLY, NGX_FILE_OPEN, 0);
 
@@ -207,6 +221,9 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
         buf.end = buf.last + NGX_CONF_BUFFER;
         buf.temporary = 1;
 
+        /**
+         * 复制文件属性及文件内容
+         */
         cf->conf_file->file.fd = fd;
         cf->conf_file->file.name.len = filename->len;
         cf->conf_file->file.name.data = filename->data;
@@ -214,12 +231,12 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
         cf->conf_file->file.log = cf->log;
         cf->conf_file->line = 1;
 
-        type = parse_file;
+        type = parse_file; /**解析的类型是配置文件*/
 
         if (ngx_dump_config
-#if (NGX_DEBUG)
-            || 1
-#endif
+            #if (NGX_DEBUG)
+                        || 1
+            #endif
            )
         {
             if (ngx_conf_add_dump(cf, filename) != NGX_OK) {
@@ -232,14 +249,15 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
 
     } else if (cf->conf_file->file.fd != NGX_INVALID_FILE) {
 
-        type = parse_block;
+        type = parse_block;/** 解析的类型是block块*/
 
     } else {
-        type = parse_param;
+        type = parse_param; /** 解析的类型是命令行配置*/
     }
 
 
     for ( ;; ) {
+        /** 语法分析函数*/
         rc = ngx_conf_read_token(cf);
 
         /*
@@ -256,6 +274,9 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
             goto done;
         }
 
+        /**
+         * 根据错误返回信息，解析 block 块的错误信息
+         */
         if (rc == NGX_CONF_BLOCK_DONE) {
 
             if (type != parse_block) {
@@ -266,6 +287,9 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
             goto done;
         }
 
+        /**
+         * 解析配在文件
+         */
         if (rc == NGX_CONF_FILE_DONE) {
 
             if (type == parse_block) {
@@ -289,6 +313,9 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
 
         /* rc == NGX_OK || rc == NGX_CONF_BLOCK_START */
 
+        /**
+         * 自定义指令处理函数
+         */
         if (cf->handler) {
 
             /*
@@ -301,6 +328,9 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
                 goto failed;
             }
 
+            /**
+             * 命令行配置处理函数
+             */
             rv = (*cf->handler)(cf, NULL, cf->handler_conf);
             if (rv == NGX_CONF_OK) {
                 continue;
@@ -315,7 +345,9 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
             goto failed;
         }
 
-
+        /**
+         * 若自定义指令处理函数 handler 为NULL， 则调用Nginx 内键的指令解析机制
+         */
         rc = ngx_conf_handler(cf, rc);
 
         if (rc == NGX_ERROR) {
@@ -328,7 +360,9 @@ failed:
     rc = NGX_ERROR;
 
 done:
-
+    /**
+     * 若是配置文件
+     */
     if (filename) {
         if (cf->conf_file->buffer->start) {
             ngx_free(cf->conf_file->buffer->start);
@@ -351,7 +385,12 @@ done:
     return NGX_CONF_OK;
 }
 
-
+/**
+ * Nginx 内键的指令解析机制
+ * @param cf
+ * @param last
+ * @return
+ */
 static ngx_int_t
 ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
 {
@@ -384,6 +423,9 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
 
             found = 1;
 
+            /**
+             * 只处理模块类型为 NGX_CONF_MODULE 或是当前正在处理的模块类型
+             */
             if (cf->cycle->modules[i]->type != NGX_CONF_MODULE
                 && cf->cycle->modules[i]->type != cf->module_type)
             {
@@ -396,6 +438,9 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
                 continue;
             }
 
+            /**
+             * 非 block 块指令必须以 “；”结尾，否则出错返回
+             */
             if (!(cmd->type & NGX_CONF_BLOCK) && last != NGX_OK) {
                 ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
                                   "directive \"%s\" is not terminated by \";\"",
@@ -403,6 +448,9 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
                 return NGX_ERROR;
             }
 
+            /**
+             * block 块指令必须后接 "{", 否则出错返回
+             */
             if ((cmd->type & NGX_CONF_BLOCK) && last != NGX_CONF_BLOCK_START) {
                 ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
                                    "directive \"%s\" has no opening \"{\"",
@@ -412,20 +460,31 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
 
             /* is the directive's argument count right ? */
 
+            /**
+             * 验证指令参数个数是否争取
+             */
             if (!(cmd->type & NGX_CONF_ANY)) {
 
+                /**
+                 * 指令携带的参数只有 1个，且其参数值只能为 on 或者 off
+                 */
                 if (cmd->type & NGX_CONF_FLAG) {
 
                     if (cf->args->nelts != 2) {
                         goto invalid;
                     }
-
+                /**
+                 * 指令携带的参数必须超过 1个
+                 */
                 } else if (cmd->type & NGX_CONF_1MORE) {
 
                     if (cf->args->nelts < 2) {
                         goto invalid;
                     }
 
+                /**
+                 *  指令携带的参数必须超过2个
+                 */
                 } else if (cmd->type & NGX_CONF_2MORE) {
 
                     if (cf->args->nelts < 3) {
@@ -446,13 +505,22 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
 
             conf = NULL;
 
+            /**
+             * 在core模块使用
+             */
             if (cmd->type & NGX_DIRECT_CONF) {
                 conf = ((void **) cf->ctx)[cf->cycle->modules[i]->index];
 
+            /**
+             * 指令配置项出现在全局配置中，不属于任何{} 配置块
+             */
             } else if (cmd->type & NGX_MAIN_CONF) {
                 conf = &(((void **) cf->ctx)[cf->cycle->modules[i]->index]);
 
             } else if (cf->ctx) {
+                /**
+                 * 除了 core 模块，其他的模块都是用该项
+                 */
                 confp = *(void **) ((char *) cf->ctx + cmd->conf);
 
                 if (confp) {
@@ -460,6 +528,9 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
                 }
             }
 
+            /**
+             * 执行指令解析回调函数
+             */
             rv = cmd->set(cf, cmd, conf);
 
             if (rv == NGX_CONF_OK) {

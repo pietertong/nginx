@@ -296,14 +296,20 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
 #endif
 
     /**
-     * 解析配置文件
+     * 配置文件解析
      */
     if (ngx_conf_param(&conf) != NGX_CONF_OK) {
+        /**
+         * 带有命令和参数 ‘-g’ 加入的配置文件
+         */
         environ = senv;
         ngx_destroy_cycle_pools(&conf);
         return NULL;
     }
 
+    /**
+     * 解析配置文件
+     */
     if (ngx_conf_parse(&conf, &cycle->conf_file) != NGX_CONF_OK) {
         environ = senv;
         ngx_destroy_cycle_pools(&conf);
