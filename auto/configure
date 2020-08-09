@@ -3,6 +3,9 @@
 # Copyright (C) Igor Sysoev
 # Copyright (C) Nginx, Inc.
 
+#exec this script ,pleas run `bash auto/configure`;
+# cd _dirname_;
+# bash auto/configure
 
 LC_ALL=C
 export LC_ALL
@@ -55,9 +58,11 @@ else
     NGX_SYSTEM=$NGX_PLATFORM
 fi
 
-#检测并设置编译器，如GCC
+#检测并设置编译器，如GCC是否安装，GCC 版本是否满足支持后续的编译；
 . auto/cc/conf
 
+#对非Windows操作系统，定义一些特定的操作系统相关的方法并检查当前环境是否支持，
+#
 if [ "$NGX_PLATFORM" != win32 ]; then
     . auto/headers
 fi
@@ -111,7 +116,8 @@ have=NGX_HTTP_SCGI_TEMP_PATH value="\"$NGX_HTTP_SCGI_TEMP_PATH\""
 
 . auto/make
 . auto/lib/make
-. auto/install
+#. auto/install
+echo "跳过安装逻辑"
 
 # STUB
 . auto/stubs

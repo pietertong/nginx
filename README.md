@@ -1,5 +1,5 @@
 # read nginx open source code
-
+# version 1.15.3
 
 [root@localhost src]# tree -L 1
  .
@@ -149,7 +149,9 @@
 
  1 directory, 74 files
  [root@localhost core]#
-
+ [参考]
+https://github.com/y123456yz/reading-code-of-nginx-1.9.2/blob/master/
+https://blog.csdn.net/initphp/category_9265172.html
 
  根据各个模块功能，可以把Nginx 源码划分如下几个部分
 

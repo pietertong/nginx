@@ -1,4 +1,5 @@
 .idea
 .idea/codeStyles/Project.xml
 .idea/vcs.xml
-
+.objs
+Makefile
