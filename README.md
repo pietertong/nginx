@@ -14,13 +14,12 @@
  7 directories, 0 files
  [root@localhost src]#
 
- core : Nginx 的核心代码，包括常用的数据结构以及Nginx 内核实现的核心代码
- event : Nginx 的事件驱动模型，以及定时器的实现相关代码
+ core : Nginx 的核心代码，内存池，链表，hashmap String 等常用的数据结构 以及Nginx 内核实现的核心代码
+ event : Nginx 的事件驱动模型，Libevent 以及定时器的实现相关代码
  http : Nginx 实现 http服务相关的代码
  mail : Nginx 实现 邮件代理服务器相关的代码
  misc : 辅助 代码，测试 C++ 头 的兼容性，以及 对 Google_PerfTools的支持
  os : 不同体系结构所提供的系统函数的封装，提供对外统一的系统调用接口；
-
 
  [root@localhost core]# tree -L 1
  .
@@ -168,5 +167,3 @@ https://blog.csdn.net/initphp/category_9265172.html
 【日志管理】：
 【Http服务】：
 【Mail服务】：
-
-

@@ -1654,8 +1654,7 @@ ngx_unload_module(void *data)
     void  *handle = data;
 
     if (ngx_dlclose(handle) != 0) {
-        ngx_log_error(NGX_LOG_ALERT, ngx_cycle->log, 0,
-                      ngx_dlclose_n " failed (%s)", ngx_dlerror());
+        ngx_log_error(NGX_LOG_ALERT, ngx_cycle->log, 0,ngx_dlclose_n " failed (%s)", ngx_dlerror());
     }
 }
 
