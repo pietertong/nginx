@@ -114,10 +114,12 @@ have=NGX_HTTP_UWSGI_TEMP_PATH value="\"$NGX_HTTP_UWSGI_TEMP_PATH\""
 have=NGX_HTTP_SCGI_TEMP_PATH value="\"$NGX_HTTP_SCGI_TEMP_PATH\""
 . auto/define
 
+. auto/cmake
 . auto/make
 . auto/lib/make
+printf "跳过安装逻辑 start \n"
 . auto/install
-echo "跳过安装逻辑"
+printf "跳过安装逻辑 end \n"
 
 # STUB
 . auto/stubs

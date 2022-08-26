@@ -69,14 +69,14 @@ ngx_str_t str2 = ngx_null_string;
 /**
  * 错误的写法
  */
- ngx_str_t str1,str2;
- str1 = ngx_string("Hello nginx");/*编译出错*/
- str2 = ngx_null_string;/*编译出错*/
- /**正确的写法*/
- ngx_str_t str1,str2;
+// ngx_str_t str1,str2;
+// str1 = ngx_string("Hello nginx");/*编译出错*/
+// str2 = ngx_null_string;/*编译出错*/
+// /**正确的写法*/
+// ngx_str_t str1,str2;
 
- ngx_str_set(&str1,"Hello nginx");
- ngx_str_null(&str2);
+// ngx_str_set(&str1,"Hello nginx");
+// ngx_str_null(&str2);
  /**
   * 注意： ngx_string 和ngx_str_set字符串参数必须是常量字符串，不能是变量字符串
   */

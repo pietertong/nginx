@@ -1,0 +1,3 @@
+/Users/zhaotong/Workspace/nginx-src/cmake-build-debug/CMakeFiles/nginx.dir
+/Users/zhaotong/Workspace/nginx-src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/zhaotong/Workspace/nginx-src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
