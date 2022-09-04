@@ -1,0 +1,45 @@
+mac m1 pcre.h 找不到
+报错：
+
+vendor/git.in.zhihu.com/arches/golang-pkg-pcre/src/pkg/pcre/pcre.go:52:10: fatal error: 'pcre.h' file not found
+
+解决：
+brew install pcre
+
+找到这个文件的地址
+brew list pcre | grep 'pcre.h$'
+/opt/homebrew/Cellar/pcre/8.45/include/pcre.h
+
+        程序搜索的地址
+cpp -v
+
+/Library/Developer/CommandLineTools/usr/include # 这个地址
+
+brew 安装地址和程序搜索地址不一样，所以需要软链过去
+sudo ln -s /opt/homebrew/Cellar/pcre/8.45/include/pcre.h /Library/Developer/CommandLineTools/usr/include
+
+本地解决方案
+bogon:~ $ brew list pcre | grep 'pcre.h$'
+/usr/local/Cellar/pcre/8.45/include/pcre.h
+bogon:~ $ cpp -v
+Apple clang version 12.0.0 (clang-1200.0.31.1)
+Target: x86_64-apple-darwin21.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx12.1.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -E -disable-free -disable-llvm-verifier -discard-value-names -main-file-name - -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.0 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I /usr/include -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdebug-compilation-dir /Users/zhaotong -ferror-limit 19 -fmessage-length 120 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-12.1.0 -fmax-type-align=16 -fdiagnostics-show-option -fcolor-diagnostics -traditional-cpp -o - -x c -
+clang -cc1 version 12.0.0 (clang-1200.0.31.1) default target x86_64-apple-darwin21.6.0
+ignoring nonexistent directory "/usr/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+ /Library/Developer/CommandLineTools/usr/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+
+
+
+sudo ln -s /usr/local/Cellar/pcre/8.45/include/pcre.h /Library/Developer/CommandLineTools/usr/include

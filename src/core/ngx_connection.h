@@ -28,11 +28,11 @@ struct ngx_listening_s {
     int                 backlog;
     int                 rcvbuf;
     int                 sndbuf;
-    #if (NGX_HAVE_KEEPALIVE_TUNABLE)
-        int                 keepidle;
-        int                 keepintvl;
-        int                 keepcnt;
-    #endif
+#if (NGX_HAVE_KEEPALIVE_TUNABLE)
+    int                 keepidle;
+    int                 keepintvl;
+    int                 keepcnt;
+#endif
 
     /* handler of accepted connection */
     ngx_connection_handler_pt   handler;
@@ -150,9 +150,9 @@ struct ngx_connection_s {
     ngx_str_t           proxy_protocol_addr;
     in_port_t           proxy_protocol_port;
 
-    #if (NGX_SSL || NGX_COMPAT)
-        ngx_ssl_connection_t  *ssl;
-    #endif
+#if (NGX_SSL || NGX_COMPAT)
+    ngx_ssl_connection_t  *ssl;
+#endif
 
     ngx_udp_connection_t  *udp;
 
@@ -187,13 +187,13 @@ struct ngx_connection_s {
 
     unsigned            need_last_buf:1;
 
-    #if (NGX_HAVE_AIO_SENDFILE || NGX_COMPAT)
-        unsigned            busy_count:2;
-    #endif
+#if (NGX_HAVE_AIO_SENDFILE || NGX_COMPAT)
+    unsigned            busy_count:2;
+#endif
 
-    #if (NGX_THREADS || NGX_COMPAT)
-        ngx_thread_task_t  *sendfile_task;
-    #endif
+#if (NGX_THREADS || NGX_COMPAT)
+    ngx_thread_task_t  *sendfile_task;
+#endif
 };
 
 

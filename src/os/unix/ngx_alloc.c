@@ -48,14 +48,12 @@ ngx_calloc(size_t size, ngx_log_t *log)
 
 #if (NGX_HAVE_POSIX_MEMALIGN)
 
-void *ngx_memalign(size_t alignment, size_t size, ngx_log_t *log)
+void *
+ngx_memalign(size_t alignment, size_t size, ngx_log_t *log)
 {
     void  *p;
     int    err;
 
-    /**
-     * 该函数分配以为对齐的size字节的内存大小，其中p指向分配的内存块
-     */
     err = posix_memalign(&p, alignment, size);
 
     if (err) {
@@ -72,7 +70,8 @@ void *ngx_memalign(size_t alignment, size_t size, ngx_log_t *log)
 
 #elif (NGX_HAVE_MEMALIGN)
 
-void *ngx_memalign(size_t alignment, size_t size, ngx_log_t *log)
+void *
+ngx_memalign(size_t alignment, size_t size, ngx_log_t *log)
 {
     void  *p;
 

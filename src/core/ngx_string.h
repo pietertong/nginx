@@ -23,8 +23,8 @@
  * ngx_str_t在u_char的基础上增加了字符串长度的信息，即len变量
  */
 typedef struct {
-    size_t      len;/** 字符串的长度*/
-    u_char     *data;/*指向字符串的第一个字符*/
+    size_t      len;
+    u_char     *data;
 } ngx_str_t;
 
 
@@ -50,37 +50,9 @@ typedef struct {
  */
 #define ngx_string(str)     { sizeof(str) - 1, (u_char *) str }
 #define ngx_null_string     { 0, NULL }
-
-/**
- * 若以及定义了 Nginx字符串变量之后在赋值，则必须使用ngx_str_set,ngx_str_null 宏定义
- */
 #define ngx_str_set(str, text)                                               \
     (str)->len = sizeof(text) - 1; (str)->data = (u_char *) text
-
 #define ngx_str_null(str)   (str)->len = 0; (str)->data = NULL
-
-
-/**
-* 例如： 正确的写法
-*/
-ngx_str_t str1 = ngx_string("Hello nginx");
-ngx_str_t str2 = ngx_null_string;
-
-/**
- * 错误的写法
- */
-// ngx_str_t str1,str2;
-// str1 = ngx_string("Hello nginx");/*编译出错*/
-// str2 = ngx_null_string;/*编译出错*/
-// /**正确的写法*/
-// ngx_str_t str1,str2;
-
-// ngx_str_set(&str1,"Hello nginx");
-// ngx_str_null(&str2);
- /**
-  * 注意： ngx_string 和ngx_str_set字符串参数必须是常量字符串，不能是变量字符串
-  */
-
 
 
 #define ngx_tolower(c)      (u_char) ((c >= 'A' && c <= 'Z') ? (c | 0x20) : c)

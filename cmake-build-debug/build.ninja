@@ -1,0 +1,974 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: nginx-src
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/zhaotong/Workspace/nginx-src/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target nginx
+
+
+#############################################
+# Order-only phony target for nginx
+
+build cmake_object_order_depends_target_nginx: phony || CMakeFiles/nginx.dir
+
+build CMakeFiles/nginx.dir/objs/ngx_modules.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/objs/ngx_modules.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/objs/ngx_modules.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/objs
+
+build CMakeFiles/nginx.dir/src/core/nginx.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/nginx.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/nginx.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_log.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_log.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_log.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_palloc.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_palloc.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_palloc.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_array.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_array.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_array.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_list.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_list.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_list.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_hash.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_hash.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_hash.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_buf.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_buf.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_buf.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_queue.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_queue.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_queue.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_output_chain.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_output_chain.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_output_chain.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_string.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_string.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_string.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_parse.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_parse.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_parse.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_parse_time.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_parse_time.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_parse_time.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_inet.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_inet.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_inet.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_file.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_file.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_file.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_crc32.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_crc32.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_crc32.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_murmurhash.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_murmurhash.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_murmurhash.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_md5.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_md5.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_md5.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_sha1.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_sha1.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_sha1.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_rbtree.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_rbtree.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_rbtree.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_radix_tree.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_radix_tree.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_radix_tree.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_slab.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_slab.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_slab.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_times.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_times.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_times.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_shmtx.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_shmtx.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_shmtx.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_connection.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_connection.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_connection.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_cycle.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_cycle.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_cycle.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_spinlock.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_spinlock.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_spinlock.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_rwlock.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_rwlock.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_rwlock.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_cpuinfo.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_cpuinfo.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_cpuinfo.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_conf_file.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_conf_file.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_conf_file.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_resolver.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_resolver.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_resolver.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_open_file_cache.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_open_file_cache.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_open_file_cache.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_crypt.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_crypt.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_crypt.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_proxy_protocol.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_proxy_protocol.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_proxy_protocol.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/core/ngx_syslog.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_syslog.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_syslog.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/event/ngx_event.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/event/ngx_event.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/event/ngx_event.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/event
+
+build CMakeFiles/nginx.dir/src/event/ngx_event_timer.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/event/ngx_event_timer.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/event/ngx_event_timer.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/event
+
+build CMakeFiles/nginx.dir/src/event/ngx_event_posted.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/event/ngx_event_posted.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/event/ngx_event_posted.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/event
+
+build CMakeFiles/nginx.dir/src/event/ngx_event_accept.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/event/ngx_event_accept.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/event/ngx_event_accept.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/event
+
+build CMakeFiles/nginx.dir/src/event/ngx_event_udp.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/event/ngx_event_udp.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/event/ngx_event_udp.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/event
+
+build CMakeFiles/nginx.dir/src/event/ngx_event_connect.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/event/ngx_event_connect.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/event/ngx_event_connect.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/event
+
+build CMakeFiles/nginx.dir/src/event/ngx_event_pipe.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/event/ngx_event_pipe.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/event/ngx_event_pipe.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/event
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_time.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_time.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_time.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_errno.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_errno.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_errno.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_alloc.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_alloc.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_alloc.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_files.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_files.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_files.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_socket.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_socket.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_socket.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_recv.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_recv.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_recv.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_readv_chain.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_readv_chain.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_readv_chain.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_udp_recv.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_udp_recv.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_udp_recv.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_send.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_send.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_send.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_writev_chain.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_writev_chain.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_writev_chain.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_udp_send.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_udp_send.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_udp_send.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_udp_sendmsg_chain.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_udp_sendmsg_chain.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_udp_sendmsg_chain.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_channel.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_channel.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_channel.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_shmem.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_shmem.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_shmem.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_process.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_process.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_process.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_daemon.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_daemon.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_daemon.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_setaffinity.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_setaffinity.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_setaffinity.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_setproctitle.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_setproctitle.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_setproctitle.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_posix_init.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_posix_init.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_posix_init.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_user.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_user.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_user.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_dlopen.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_dlopen.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_dlopen.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_process_cycle.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_process_cycle.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_process_cycle.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_darwin_init.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_darwin_init.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_darwin_init.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/event/modules/ngx_kqueue_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/event/modules/ngx_kqueue_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/event/modules/ngx_kqueue_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/event/modules
+
+build CMakeFiles/nginx.dir/src/os/unix/ngx_darwin_sendfile_chain.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/os/unix/ngx_darwin_sendfile_chain.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/os/unix/ngx_darwin_sendfile_chain.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/os/unix
+
+build CMakeFiles/nginx.dir/src/core/ngx_regex.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/core/ngx_regex.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/core/ngx_regex.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/core
+
+build CMakeFiles/nginx.dir/src/http/ngx_http.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_core_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_core_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_core_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_special_response.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_special_response.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_special_response.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_request.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_request.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_request.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_parse.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_parse.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_parse.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_log_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_log_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_log_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_request_body.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_request_body.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_request_body.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_variables.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_variables.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_variables.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_script.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_script.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_script.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_upstream.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_upstream.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_upstream.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_upstream_round_robin.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_upstream_round_robin.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_upstream_round_robin.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_file_cache.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_file_cache.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_file_cache.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_write_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_write_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_write_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_header_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_header_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_header_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_chunked_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_chunked_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_chunked_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_range_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_range_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_range_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_gzip_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_gzip_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_gzip_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_postpone_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_postpone_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_postpone_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_ssi_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_ssi_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_ssi_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_charset_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_charset_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_charset_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_userid_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_userid_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_userid_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_headers_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_headers_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_headers_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/ngx_http_copy_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/ngx_http_copy_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/ngx_http_copy_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_not_modified_filter_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_not_modified_filter_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_not_modified_filter_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_static_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_static_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_static_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_autoindex_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_autoindex_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_autoindex_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_index_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_index_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_index_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_mirror_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_mirror_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_mirror_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_try_files_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_try_files_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_try_files_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_auth_basic_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_auth_basic_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_auth_basic_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_access_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_access_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_access_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_limit_conn_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_limit_conn_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_limit_conn_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_limit_req_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_limit_req_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_limit_req_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_geo_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_geo_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_geo_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_map_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_map_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_map_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_split_clients_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_split_clients_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_split_clients_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_referer_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_referer_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_referer_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_rewrite_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_rewrite_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_rewrite_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_proxy_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_proxy_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_proxy_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_fastcgi_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_fastcgi_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_fastcgi_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_uwsgi_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_uwsgi_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_uwsgi_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_scgi_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_scgi_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_scgi_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_memcached_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_memcached_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_memcached_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_empty_gif_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_empty_gif_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_empty_gif_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_browser_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_browser_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_browser_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_hash_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_upstream_hash_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_hash_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_ip_hash_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_upstream_ip_hash_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_ip_hash_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_least_conn_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_upstream_least_conn_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_least_conn_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_random_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_upstream_random_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_random_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_keepalive_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_upstream_keepalive_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_keepalive_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+build CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_zone_module.c.o: C_COMPILER__nginx_Debug /Users/zhaotong/Workspace/nginx-src/src/http/modules/ngx_http_upstream_zone_module.c || cmake_object_order_depends_target_nginx
+  DEP_FILE = CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_zone_module.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I/Users/zhaotong/Workspace/nginx-src/. -I/Users/zhaotong/Workspace/nginx-src/src/core -I/Users/zhaotong/Workspace/nginx-src/src/event -I/Users/zhaotong/Workspace/nginx-src/src/event/modules -I/Users/zhaotong/Workspace/nginx-src/src/os/unix -I/Users/zhaotong/Workspace/nginx-src/src/os/win32 -I/Users/zhaotong/Workspace/nginx-src/objs -I/Users/zhaotong/Workspace/nginx-src/src/http -I/Users/zhaotong/Workspace/nginx-src/src/http/modules
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  OBJECT_FILE_DIR = CMakeFiles/nginx.dir/src/http/modules
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target nginx
+
+
+#############################################
+# Link the executable nginx
+
+build nginx: C_EXECUTABLE_LINKER__nginx_Debug CMakeFiles/nginx.dir/objs/ngx_modules.c.o CMakeFiles/nginx.dir/src/core/nginx.c.o CMakeFiles/nginx.dir/src/core/ngx_log.c.o CMakeFiles/nginx.dir/src/core/ngx_palloc.c.o CMakeFiles/nginx.dir/src/core/ngx_array.c.o CMakeFiles/nginx.dir/src/core/ngx_list.c.o CMakeFiles/nginx.dir/src/core/ngx_hash.c.o CMakeFiles/nginx.dir/src/core/ngx_buf.c.o CMakeFiles/nginx.dir/src/core/ngx_queue.c.o CMakeFiles/nginx.dir/src/core/ngx_output_chain.c.o CMakeFiles/nginx.dir/src/core/ngx_string.c.o CMakeFiles/nginx.dir/src/core/ngx_parse.c.o CMakeFiles/nginx.dir/src/core/ngx_parse_time.c.o CMakeFiles/nginx.dir/src/core/ngx_inet.c.o CMakeFiles/nginx.dir/src/core/ngx_file.c.o CMakeFiles/nginx.dir/src/core/ngx_crc32.c.o CMakeFiles/nginx.dir/src/core/ngx_murmurhash.c.o CMakeFiles/nginx.dir/src/core/ngx_md5.c.o CMakeFiles/nginx.dir/src/core/ngx_sha1.c.o CMakeFiles/nginx.dir/src/core/ngx_rbtree.c.o CMakeFiles/nginx.dir/src/core/ngx_radix_tree.c.o CMakeFiles/nginx.dir/src/core/ngx_slab.c.o CMakeFiles/nginx.dir/src/core/ngx_times.c.o CMakeFiles/nginx.dir/src/core/ngx_shmtx.c.o CMakeFiles/nginx.dir/src/core/ngx_connection.c.o CMakeFiles/nginx.dir/src/core/ngx_cycle.c.o CMakeFiles/nginx.dir/src/core/ngx_spinlock.c.o CMakeFiles/nginx.dir/src/core/ngx_rwlock.c.o CMakeFiles/nginx.dir/src/core/ngx_cpuinfo.c.o CMakeFiles/nginx.dir/src/core/ngx_conf_file.c.o CMakeFiles/nginx.dir/src/core/ngx_module.c.o CMakeFiles/nginx.dir/src/core/ngx_resolver.c.o CMakeFiles/nginx.dir/src/core/ngx_open_file_cache.c.o CMakeFiles/nginx.dir/src/core/ngx_crypt.c.o CMakeFiles/nginx.dir/src/core/ngx_proxy_protocol.c.o CMakeFiles/nginx.dir/src/core/ngx_syslog.c.o CMakeFiles/nginx.dir/src/event/ngx_event.c.o CMakeFiles/nginx.dir/src/event/ngx_event_timer.c.o CMakeFiles/nginx.dir/src/event/ngx_event_posted.c.o CMakeFiles/nginx.dir/src/event/ngx_event_accept.c.o CMakeFiles/nginx.dir/src/event/ngx_event_udp.c.o CMakeFiles/nginx.dir/src/event/ngx_event_connect.c.o CMakeFiles/nginx.dir/src/event/ngx_event_pipe.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_time.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_errno.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_alloc.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_files.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_socket.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_recv.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_readv_chain.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_udp_recv.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_send.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_writev_chain.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_udp_send.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_udp_sendmsg_chain.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_channel.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_shmem.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_process.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_daemon.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_setaffinity.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_setproctitle.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_posix_init.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_user.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_dlopen.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_process_cycle.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_darwin_init.c.o CMakeFiles/nginx.dir/src/event/modules/ngx_kqueue_module.c.o CMakeFiles/nginx.dir/src/os/unix/ngx_darwin_sendfile_chain.c.o CMakeFiles/nginx.dir/src/core/ngx_regex.c.o CMakeFiles/nginx.dir/src/http/ngx_http.c.o CMakeFiles/nginx.dir/src/http/ngx_http_core_module.c.o CMakeFiles/nginx.dir/src/http/ngx_http_special_response.c.o CMakeFiles/nginx.dir/src/http/ngx_http_request.c.o CMakeFiles/nginx.dir/src/http/ngx_http_parse.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_log_module.c.o CMakeFiles/nginx.dir/src/http/ngx_http_request_body.c.o CMakeFiles/nginx.dir/src/http/ngx_http_variables.c.o CMakeFiles/nginx.dir/src/http/ngx_http_script.c.o CMakeFiles/nginx.dir/src/http/ngx_http_upstream.c.o CMakeFiles/nginx.dir/src/http/ngx_http_upstream_round_robin.c.o CMakeFiles/nginx.dir/src/http/ngx_http_file_cache.c.o CMakeFiles/nginx.dir/src/http/ngx_http_write_filter_module.c.o CMakeFiles/nginx.dir/src/http/ngx_http_header_filter_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_chunked_filter_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_range_filter_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_gzip_filter_module.c.o CMakeFiles/nginx.dir/src/http/ngx_http_postpone_filter_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_ssi_filter_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_charset_filter_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_userid_filter_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_headers_filter_module.c.o CMakeFiles/nginx.dir/src/http/ngx_http_copy_filter_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_not_modified_filter_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_static_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_autoindex_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_index_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_mirror_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_try_files_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_auth_basic_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_access_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_limit_conn_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_limit_req_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_geo_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_map_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_split_clients_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_referer_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_rewrite_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_proxy_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_fastcgi_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_uwsgi_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_scgi_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_memcached_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_empty_gif_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_browser_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_hash_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_ip_hash_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_least_conn_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_random_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_keepalive_module.c.o CMakeFiles/nginx.dir/src/http/modules/ngx_http_upstream_zone_module.c.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  LINK_LIBRARIES = -lpcre  -lz
+  OBJECT_DIR = CMakeFiles/nginx.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = nginx
+  TARGET_PDB = nginx.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/zhaotong/Workspace/nginx-src/cmake-build-debug && "/Users/zhaotong/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/zhaotong/Workspace/nginx-src/cmake-build-debug && "/Users/zhaotong/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/zhaotong/Workspace/nginx-src -B/Users/zhaotong/Workspace/nginx-src/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/zhaotong/Workspace/nginx-src/cmake-build-debug
+
+build all: phony nginx
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/zhaotong/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

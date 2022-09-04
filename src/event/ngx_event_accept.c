@@ -27,9 +27,9 @@ ngx_event_accept(ngx_event_t *ev)
     ngx_listening_t   *ls;
     ngx_connection_t  *c, *lc;
     ngx_event_conf_t  *ecf;
-    #if (NGX_HAVE_ACCEPT4)
-        static ngx_uint_t  use_accept4 = 1;
-    #endif
+#if (NGX_HAVE_ACCEPT4)
+    static ngx_uint_t  use_accept4 = 1;
+#endif
 
     if (ev->timedout) {
         if (ngx_enable_accept_events((ngx_cycle_t *) ngx_cycle) != NGX_OK) {
@@ -38,9 +38,7 @@ ngx_event_accept(ngx_event_t *ev)
 
         ev->timedout = 0;
     }
-    /**
-    * 
-    */
+
     ecf = ngx_event_get_conf(ngx_cycle->conf_ctx, ngx_event_core_module);
 
     if (!(ngx_event_flags & NGX_USE_KQUEUE_EVENT)) {

@@ -279,10 +279,10 @@ typedef struct {
     ngx_hash_wildcard_t       *wc_head;
     ngx_hash_wildcard_t       *wc_tail;
 
-    #if (NGX_PCRE)
-        ngx_uint_t                 nregex;
-        ngx_http_server_name_t    *regex;
-    #endif
+#if (NGX_PCRE)
+    ngx_uint_t                 nregex;
+    ngx_http_server_name_t    *regex;
+#endif
 
     /* the default server configuration for this address:port */
     ngx_http_core_srv_conf_t  *default_server;

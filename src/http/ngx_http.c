@@ -79,9 +79,7 @@ ngx_str_t  ngx_http_html_default_types[] = {
     ngx_null_string
 };
 
-/***
- * 解析http block
- */
+
 static ngx_command_t  ngx_http_commands[] = {
 
     { ngx_string("http"),
@@ -234,9 +232,6 @@ ngx_http_block(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 
     /* parse inside the http{} block */
 
-    /**
-     * d调用通用模块配置解析
-     */
     cf->module_type = NGX_HTTP_MODULE;
     cf->cmd_type = NGX_HTTP_MAIN_CONF;
     rv = ngx_conf_parse(cf, NULL);
@@ -245,8 +240,7 @@ ngx_http_block(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
         goto failed;
     }
 
-    /**
-     * 根据解析结果，精进行合并处理
+    /*
      * init http{} main_conf's, merge the server{}s' srv_conf's
      * and its location{}s' loc_conf's
      */

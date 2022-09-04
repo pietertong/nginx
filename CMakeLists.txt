@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.6)
+project("nginx-src")
 include_directories(
     .
-    src/core src/event src/event/modules src/os/unix objs src/http src/http/modules sed -e s/  *([^ ][^ ]*)/ 
-	1/g -e s/////g)
+    src/core src/event src/event/modules src/os/unix src/os/win32 objs src/http src/http/modules)
 set(SOURCE_FILES
     objs/ngx_modules.c
     src/core/nginx.c 

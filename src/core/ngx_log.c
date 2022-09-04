@@ -238,9 +238,7 @@ ngx_log_debug_core(ngx_log_t *log, ngx_err_t err, const char *fmt, ...)
 
 #endif
 
-/**
- * 打印alert级别的日志，表示出现严重错误
- */
+
 void ngx_cdecl
 ngx_log_abort(ngx_err_t err, const char *fmt, ...)
 {
@@ -285,13 +283,7 @@ ngx_log_stderr(ngx_err_t err, const char *fmt, ...)
     (void) ngx_write_console(ngx_stderr, errstr, p - errstr);
 }
 
-/**
- * 打印相关errno的日志（注意此函数至少保证留有50个字节的空间来打印errno日志）
- * @param buf
- * @param last
- * @param err
- * @return
- */
+
 u_char *
 ngx_log_errno(u_char *buf, u_char *last, ngx_err_t err)
 {
@@ -321,12 +313,9 @@ ngx_log_errno(u_char *buf, u_char *last, ngx_err_t err)
     return buf;
 }
 
-/**
- * nginx 日志初始化
- * @param prefix
- * @return
- */
-ngx_log_t *ngx_log_init(u_char *prefix)
+
+ngx_log_t *
+ngx_log_init(u_char *prefix)
 {
     u_char  *p, *name;
     size_t   nlen, plen;
@@ -410,12 +399,9 @@ ngx_log_t *ngx_log_init(u_char *prefix)
     return &ngx_log;
 }
 
-/**
- * 打开默认的日志文件
- * @param cycle
- * @return
- */
-ngx_int_t ngx_log_open_default(ngx_cycle_t *cycle)
+
+ngx_int_t
+ngx_log_open_default(ngx_cycle_t *cycle)
 {
     ngx_log_t         *log;
     static ngx_str_t   error_log = ngx_string(NGX_ERROR_LOG_PATH);
@@ -451,12 +437,9 @@ ngx_int_t ngx_log_open_default(ngx_cycle_t *cycle)
     return NGX_OK;
 }
 
-/**
- * 重定向标准错误日志，将标准的错误输出到某一个新的日志文件里
- * @param cycle
- * @return
- */
-ngx_int_t ngx_log_redirect_stderr(ngx_cycle_t *cycle)
+
+ngx_int_t
+ngx_log_redirect_stderr(ngx_cycle_t *cycle)
 {
     ngx_fd_t  fd;
 
@@ -479,11 +462,7 @@ ngx_int_t ngx_log_redirect_stderr(ngx_cycle_t *cycle)
     return NGX_OK;
 }
 
-/**
- * 获取一个日志对象
- * @param head
- * @return
- */
+
 ngx_log_t *
 ngx_log_get_file_log(ngx_log_t *head)
 {
@@ -572,12 +551,7 @@ ngx_error_log(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     return ngx_log_set_log(cf, &dummy);
 }
 
-/**
- * 跟进 ngx_conf_t 设置一个日志对象
- * @param cf
- * @param head
- * @return
- */
+
 char *
 ngx_log_set_log(ngx_conf_t *cf, ngx_log_t **head)
 {

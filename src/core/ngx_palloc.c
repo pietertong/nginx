@@ -9,43 +9,31 @@
 #include <ngx_core.h>
 
 
-static ngx_inline void *ngx_palloc_small(ngx_pool_t *pool, size_t size, ngx_uint_t align);
+static ngx_inline void *ngx_palloc_small(ngx_pool_t *pool, size_t size,
+    ngx_uint_t align);
 static void *ngx_palloc_block(ngx_pool_t *pool, size_t size);
 static void *ngx_palloc_large(ngx_pool_t *pool, size_t size);
 
-/**
- * 创建内存池
- * @param size
- * @param log
- * @return
- */
-ngx_pool_t *ngx_create_pool(size_t size, ngx_log_t *log)
-{
-    ngx_pool_t  *p;/*执行内存池头部*/
 
-    /**
-     * 分配大小为的内存
-     */
-     /*ngx_memalign()函数实现与 /os/unix/ngx_alloc.c文件中*/
+ngx_pool_t *
+ngx_create_pool(size_t size, ngx_log_t *log)
+{
+    ngx_pool_t  *p;
+
     p = ngx_memalign(NGX_POOL_ALIGNMENT, size, log);
     if (p == NULL) {
         return NULL;
     }
 
-    /**
-     * 以下是初始化ngx_pool_t的结构信息
-     */
     p->d.last = (u_char *) p + sizeof(ngx_pool_t);
     p->d.end = (u_char *) p + size;
     p->d.next = NULL;
     p->d.failed = 0;
 
-    size = size - sizeof(ngx_pool_t);/*可供分配的内存大小*/
-    /*不能超过最大的限定值 4096B */
-    /*NGX_MAX_ALLOC_FROM_POOL 在 /os/unix/ngx_palloc.h 中定义, */
+    size = size - sizeof(ngx_pool_t);
     p->max = (size < NGX_MAX_ALLOC_FROM_POOL) ? size : NGX_MAX_ALLOC_FROM_POOL;
 
-    p->current = p;/*指向当前的内存池*/
+    p->current = p;
     p->chain = NULL;
     p->large = NULL;
     p->cleanup = NULL;
@@ -54,19 +42,14 @@ ngx_pool_t *ngx_create_pool(size_t size, ngx_log_t *log)
     return p;
 }
 
-/**
- * 销毁内存池
- * @param pool
- */
-void ngx_destroy_pool(ngx_pool_t *pool)
+
+void
+ngx_destroy_pool(ngx_pool_t *pool)
 {
     ngx_pool_t          *p, *n;
     ngx_pool_large_t    *l;
     ngx_pool_cleanup_t  *c;
 
-    /**
-     * 若注册了 cleanup,则遍历该链表结构，依次调用handler函数清理数据
-     */
     for (c = pool->cleanup; c; c = c->next) {
         if (c->handler) {
             ngx_log_debug1(NGX_LOG_DEBUG_ALLOC, pool->log, 0,
@@ -97,17 +80,12 @@ void ngx_destroy_pool(ngx_pool_t *pool)
 
 #endif
 
-    /**
-     *遍历大数据内存节点
-     */
     for (l = pool->large; l; l = l->next) {
         if (l->alloc) {
-            ngx_free(l->alloc); /*释放内存 free()*/
+            ngx_free(l->alloc);
         }
     }
-    /**
-     * 遍历所有分配的内存池，释放内存池结构
-     */
+
     for (p = pool, n = pool->d.next; /* void */; p = n, n = n->d.next) {
         ngx_free(p);
 
@@ -117,13 +95,9 @@ void ngx_destroy_pool(ngx_pool_t *pool)
     }
 }
 
-/**
- *  ngx 重置 内存池
- *  释放所有的large 内存，并将d-last指针 重新指向 ngx_pool_ 结构之后数据去的开始位置
- *  由于内存池被创建初始化是是不包括大块内存的，所以要必须释放大块内存
- * @param pool
- */
-void ngx_reset_pool(ngx_pool_t *pool)
+
+void
+ngx_reset_pool(ngx_pool_t *pool)
 {
     ngx_pool_t        *p;
     ngx_pool_large_t  *l;
@@ -145,7 +119,8 @@ void ngx_reset_pool(ngx_pool_t *pool)
 }
 
 
-void *ngx_palloc(ngx_pool_t *pool, size_t size)
+void *
+ngx_palloc(ngx_pool_t *pool, size_t size)
 {
 #if !(NGX_DEBUG_PALLOC)
     if (size <= pool->max) {
@@ -157,32 +132,21 @@ void *ngx_palloc(ngx_pool_t *pool, size_t size)
 }
 
 
-void *ngx_pnalloc(ngx_pool_t *pool, size_t size)
+void *
+ngx_pnalloc(ngx_pool_t *pool, size_t size)
 {
 #if !(NGX_DEBUG_PALLOC)
-    /**
-     * 小内存分配
-     */
     if (size <= pool->max) {
         return ngx_palloc_small(pool, size, 0);
     }
 #endif
-    /**
-     * 大内存块
-     */
+
     return ngx_palloc_large(pool, size);
 }
 
-/**
- * 若请求的内存大小 size小于 内存池最大内存值max,
- * 则进行小内存分配，从 current开始遍历pool链表
- *
- * @param pool
- * @param size
- * @param align
- * @return
- */
-static ngx_inline void *ngx_palloc_small(ngx_pool_t *pool, size_t size, ngx_uint_t align)
+
+static ngx_inline void *
+ngx_palloc_small(ngx_pool_t *pool, size_t size, ngx_uint_t align)
 {
     u_char      *m;
     ngx_pool_t  *p;
@@ -209,17 +173,13 @@ static ngx_inline void *ngx_palloc_small(ngx_pool_t *pool, size_t size, ngx_uint
     return ngx_palloc_block(pool, size);
 }
 
-/**
- * 修改 了 new => new_t;
- * @param pool
- * @param size
- * @return
- */
-static void *ngx_palloc_block(ngx_pool_t *pool, size_t size)
+
+static void *
+ngx_palloc_block(ngx_pool_t *pool, size_t size)
 {
     u_char      *m;
     size_t       psize;
-    ngx_pool_t  *p, *new_t;
+    ngx_pool_t  *p, *new;
 
     psize = (size_t) (pool->d.end - (u_char *) pool);
 
@@ -228,15 +188,15 @@ static void *ngx_palloc_block(ngx_pool_t *pool, size_t size)
         return NULL;
     }
 
-    new_t = (ngx_pool_t *) m;
+    new = (ngx_pool_t *) m;
 
-    new_t->d.end = m + psize;
-    new_t->d.next = NULL;
-    new_t->d.failed = 0;
+    new->d.end = m + psize;
+    new->d.next = NULL;
+    new->d.failed = 0;
 
     m += sizeof(ngx_pool_data_t);
     m = ngx_align_ptr(m, NGX_ALIGNMENT);
-    new_t->d.last = m + size;
+    new->d.last = m + size;
 
     for (p = pool->current; p->d.next; p = p->d.next) {
         if (p->d.failed++ > 4) {
@@ -244,7 +204,7 @@ static void *ngx_palloc_block(ngx_pool_t *pool, size_t size)
         }
     }
 
-    p->d.next = new_t;
+    p->d.next = new;
 
     return m;
 }
@@ -314,7 +274,8 @@ ngx_pmemalign(ngx_pool_t *pool, size_t size, size_t alignment)
 }
 
 
-ngx_int_t ngx_pfree(ngx_pool_t *pool, void *p)
+ngx_int_t
+ngx_pfree(ngx_pool_t *pool, void *p)
 {
     ngx_pool_large_t  *l;
 
@@ -332,13 +293,9 @@ ngx_int_t ngx_pfree(ngx_pool_t *pool, void *p)
     return NGX_DECLINED;
 }
 
-/**
- * 直接调 ngx_palloc分配内存，然后进行一次 0 初始化的过程
- * @param pool
- * @param size
- * @return
- */
-void * ngx_pcalloc(ngx_pool_t *pool, size_t size)
+
+void *
+ngx_pcalloc(ngx_pool_t *pool, size_t size)
 {
     void *p;
 

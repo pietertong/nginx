@@ -52,28 +52,25 @@
 
     #define ngx_random               random
 
-    /* TODO: #ifndef */
-    #define NGX_SHUTDOWN_SIGNAL      QUIT
-    #define NGX_TERMINATE_SIGNAL     TERM
-    #define NGX_NOACCEPT_SIGNAL      WINCH
-    #define NGX_RECONFIGURE_SIGNAL   HUP
+/* TODO: #ifndef */
+#define NGX_SHUTDOWN_SIGNAL      QUIT
+#define NGX_TERMINATE_SIGNAL     TERM
+#define NGX_NOACCEPT_SIGNAL      WINCH
+#define NGX_RECONFIGURE_SIGNAL   HUP
 
-    #if (NGX_LINUXTHREADS)
-    #define NGX_REOPEN_SIGNAL        INFO
-    #define NGX_CHANGEBIN_SIGNAL     XCPU
-    #else
-    #define NGX_REOPEN_SIGNAL        USR1
-    #define NGX_CHANGEBIN_SIGNAL     USR2
-    #endif
+#if (NGX_LINUXTHREADS)
+#define NGX_REOPEN_SIGNAL        INFO
+#define NGX_CHANGEBIN_SIGNAL     XCPU
+#else
+#define NGX_REOPEN_SIGNAL        USR1
+#define NGX_CHANGEBIN_SIGNAL     USR2
+#endif
 
-    #define ngx_cdecl
-    #define ngx_libc_cdecl
+#define ngx_cdecl
+#define ngx_libc_cdecl
 
 #endif
 
-/**
- * 其中intptr_t uintptr_t 定义在文件 /usr/include/stdint.h文件中
- */
 typedef intptr_t        ngx_int_t;
 typedef uintptr_t       ngx_uint_t;
 typedef intptr_t        ngx_flag_t;
@@ -83,17 +80,17 @@ typedef intptr_t        ngx_flag_t;
 #define NGX_INT64_LEN   (sizeof("-9223372036854775808") - 1)
 
 #if (NGX_PTR_SIZE == 4)
-    #define NGX_INT_T_LEN   NGX_INT32_LEN
-    #define NGX_MAX_INT_T_VALUE  2147483647
+#define NGX_INT_T_LEN   NGX_INT32_LEN
+#define NGX_MAX_INT_T_VALUE  2147483647
 
 #else
-    #define NGX_INT_T_LEN   NGX_INT64_LEN
-    #define NGX_MAX_INT_T_VALUE  9223372036854775807
+#define NGX_INT_T_LEN   NGX_INT64_LEN
+#define NGX_MAX_INT_T_VALUE  9223372036854775807
 #endif
 
 
 #ifndef NGX_ALIGNMENT
-    #define NGX_ALIGNMENT   sizeof(unsigned long)    /* platform word */
+#define NGX_ALIGNMENT   sizeof(unsigned long)    /* platform word */
 #endif
 
 #define ngx_align(d, a)     (((d) + (a - 1)) & ~(a - 1))

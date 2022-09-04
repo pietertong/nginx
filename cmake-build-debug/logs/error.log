@@ -1,0 +1,14 @@
+2022/08/26 14:05:09 [error] 66807#0: *1 ".//html/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/26 14:05:09 [error] 66807#0: *1 open() ".//html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/26 14:05:57 [emerg] 67997#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/08/26 14:05:57 [emerg] 67997#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/08/26 14:05:57 [emerg] 67997#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/08/26 14:05:57 [emerg] 67997#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/08/26 14:05:57 [emerg] 67997#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/08/26 14:05:57 [emerg] 67997#0: still could not bind()
+2022/08/31 21:48:23 [emerg] 80523#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/08/31 21:48:23 [emerg] 80523#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/08/31 21:48:23 [emerg] 80523#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/08/31 21:48:23 [emerg] 80523#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/08/31 21:48:23 [emerg] 80523#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/08/31 21:48:23 [emerg] 80523#0: still could not bind()

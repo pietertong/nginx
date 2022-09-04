@@ -29,6 +29,7 @@
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/event"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/event/modules"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/os/unix"/>
+					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/os/win32"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/objs"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/http"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/http/modules"/>
@@ -42,6 +43,7 @@
 					<Add directory="/"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/1/g"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/s//g"/>
+					<Add directory="/Users/zhaotong/Workspace/nginx-src/servant"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
@@ -68,6 +70,7 @@
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/event"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/event/modules"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/os/unix"/>
+					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/os/win32"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/objs"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/http"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/src/http/modules"/>
@@ -81,6 +84,7 @@
 					<Add directory="/"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/1/g"/>
 					<Add directory="/Users/zhaotong/Workspace/nginx-src/s//g"/>
+					<Add directory="/Users/zhaotong/Workspace/nginx-src/servant"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
