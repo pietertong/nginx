@@ -1,5 +1,15 @@
 # read nginx open source code
 # version 1.15.3
+从9个组件开始，教你如何高效的阅读nginx源码？
+1. 内存池大小块组织架构
+2. 线程池的实现模板
+3. 内存共享组件3种实现方式
+4. http处理流程
+5. nginx 11个phase的原理
+6. 红黑树的实现场景
+7. 解析配置文件
+8. 惊群的解决方案
+9. 原子操作
 
 [root@localhost src]# tree -L 1
  .
