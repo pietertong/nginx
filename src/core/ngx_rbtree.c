@@ -1,5 +1,7 @@
 
 /*
+ * https://blog.csdn.net/dearQiHao/article/details/102878306
+ * NGINX下的红黑树源码详解
  * Copyright (C) Igor Sysoev
  * Copyright (C) Nginx, Inc.
  */
@@ -373,28 +375,40 @@ void ngx_rbtree_delete(ngx_rbtree_t *tree, ngx_rbtree_node_t *node)
 
 /**
  * 左旋转操作
+ * 就是以一个节点P和她的右孩子Y做为支轴进行，让Y称为新的根，
+ * P称为Y的左孩子，
+ * Y的左孩子称为P的右孩子
  * @param root
  * @param sentinel
  * @param node
  */
 static ngx_inline void ngx_rbtree_left_rotate(ngx_rbtree_node_t **root, ngx_rbtree_node_t *sentinel,ngx_rbtree_node_t *node)
 {
-    ngx_rbtree_node_t  *temp;
+    ngx_rbtree_node_t  *temp; // 定义临时变量
+    // 获取当前节点的右节点，此时 temp为当前节点额右节点了
     temp = node->right; /*temp 为node 节点的右孩子*/
+    //node的右节点设置为他原来右节点的左节点
     node->right = temp->left; /*设置node节点的右孩子为tmp的左孩子*/
 
+    //如果右子节点的左节点不为 哨兵（nil)
     if (temp->left != sentinel) {
+        //右子节点的左子节点挂在左旋节点上
         temp->left->parent = node;
     }
+    // 右节点将会变成原来node的父节点
     temp->parent = node->parent;
+    // 判断是不是根节点的判断
     if (node == *root) {
         *root = temp;
     } else if (node == node->parent->left) {
+        // 把右节点的信息和原来node的parent 进行维护
         node->parent->left = temp;
     } else {
         node->parent->right = temp;
     }
+    // 现在的node 变回原来右节点的子节点了
     temp->left = node;
+    // 所以他的parent变成了temp 节点
     node->parent = temp;
 }
 
@@ -409,49 +423,51 @@ static ngx_inline void ngx_rbtree_right_rotate(ngx_rbtree_node_t **root, ngx_rbt
 {
     ngx_rbtree_node_t  *temp;
     temp = node->left;
-    node->left = temp->right;
-    if (temp->right != sentinel) {
-        temp->right->parent = node;
+    node->left = temp->right; // 左子节点执行原左子节点的右节点
+    if (temp->right != sentinel) { // 如果左子节点的右节点不为哨兵（nil）
+        temp->right->parent = node; // 左子节点的右子节点在右旋节点上
     }
-    temp->parent = node->parent;
+    temp->parent = node->parent; // 左子节点挂在右旋节点的父节点上
     if (node == *root) {
+        // 如果 右旋节点为根节点，根节点赋为左子节点
         *root = temp;
-
     } else if (node == node->parent->right) {
+        // 如果右旋节点在右子节点，左子节点挂父节点右边
         node->parent->right = temp;
-
     } else {
+        // 否则 左子节点挂父节点左边
         node->parent->left = temp;
     }
-
+    // 现在node 变回他原来左子节点的子节点
     temp->right = node;
+    // 所以他的parent变成了temp
     node->parent = temp;
 }
 
-
+/**
+ * 在红黑树上找节点的后继节点
+ * @param tree
+ * @param node
+ * @return
+ */
 ngx_rbtree_node_t * ngx_rbtree_next(ngx_rbtree_t *tree, ngx_rbtree_node_t *node)
 {
     ngx_rbtree_node_t  *root, *sentinel, *parent;
-
     sentinel = tree->sentinel;
-
     if (node->right != sentinel) {
+        // 在有右子树的情况下，找到 node 节点的最小值
         return ngx_rbtree_min(node->right, sentinel);
     }
-
+    // 没有右子树，查找
     root = tree->root;
-
     for ( ;; ) {
         parent = node->parent;
-
         if (node == root) {
             return NULL;
         }
-
         if (node == parent->left) {
             return parent;
         }
-
         node = parent;
     }
 }

@@ -96,31 +96,23 @@ ngx_event_expire_timers(void)
 }
 
 
-ngx_int_t
-ngx_event_no_timers_left(void)
+ngx_int_t ngx_event_no_timers_left(void)
 {
     ngx_event_t        *ev;
     ngx_rbtree_node_t  *node, *root, *sentinel;
-
     sentinel = ngx_event_timer_rbtree.sentinel;
     root = ngx_event_timer_rbtree.root;
-
     if (root == sentinel) {
         return NGX_OK;
     }
-
-    for (node = ngx_rbtree_min(root, sentinel);
-         node;
-         node = ngx_rbtree_next(&ngx_event_timer_rbtree, node))
+    // for (i = 0 ; i< 3; i ++;){}
+    for (node = ngx_rbtree_min(root, sentinel);node;node = ngx_rbtree_next(&ngx_event_timer_rbtree, node))
     {
         ev = (ngx_event_t *) ((char *) node - offsetof(ngx_event_t, timer));
-
         if (!ev->cancelable) {
             return NGX_AGAIN;
         }
     }
-
     /* only cancelable timers left */
-
     return NGX_OK;
 }

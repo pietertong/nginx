@@ -119,15 +119,13 @@ ngx_reset_pool(ngx_pool_t *pool)
 }
 
 
-void *
-ngx_palloc(ngx_pool_t *pool, size_t size)
+void *ngx_palloc(ngx_pool_t *pool, size_t size)
 {
 #if !(NGX_DEBUG_PALLOC)
     if (size <= pool->max) {
         return ngx_palloc_small(pool, size, 1);
     }
 #endif
-
     return ngx_palloc_large(pool, size);
 }
 
@@ -145,8 +143,7 @@ ngx_pnalloc(ngx_pool_t *pool, size_t size)
 }
 
 
-static ngx_inline void *
-ngx_palloc_small(ngx_pool_t *pool, size_t size, ngx_uint_t align)
+static ngx_inline void *ngx_palloc_small(ngx_pool_t *pool, size_t size, ngx_uint_t align)
 {
     u_char      *m;
     ngx_pool_t  *p;
@@ -210,8 +207,7 @@ ngx_palloc_block(ngx_pool_t *pool, size_t size)
 }
 
 
-static void *
-ngx_palloc_large(ngx_pool_t *pool, size_t size)
+static void *ngx_palloc_large(ngx_pool_t *pool, size_t size)
 {
     void              *p;
     ngx_uint_t         n;
