@@ -18,3 +18,10 @@
 2022/09/04 14:06:07 [emerg] 7263#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
 2022/09/04 14:06:07 [emerg] 7263#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
 2022/09/04 14:06:07 [emerg] 7263#0: still could not bind()
+2022/09/09 10:55:19 [error] 40361#0: *1 open() ".//html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/09/09 10:55:23 [emerg] 40379#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/09/09 10:55:23 [emerg] 40379#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/09/09 10:55:23 [emerg] 40379#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/09/09 10:55:23 [emerg] 40379#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/09/09 10:55:23 [emerg] 40379#0: bind() to 0.0.0.0:80 failed (48: Address already in use)
+2022/09/09 10:55:23 [emerg] 40379#0: still could not bind()
